@@ -1,4 +1,11 @@
 .header-animado {
-  background: #a2a2a2;
-  margin: 0;
-  padding: 0; }
+  background-color: #64a59a;
+  height: 300px;
+  border-radius: 0; }
+
+.header-nav {
+  background-color: #84b8af; }
+
+ul, li {
+  list-style-type: none;
+  display: inline-block; }
