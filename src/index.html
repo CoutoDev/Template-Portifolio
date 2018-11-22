@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- Scripts -->
     <script src="components/bootstrap/js/bootstrap.min.js"> </script>
@@ -17,16 +18,22 @@
 <body>
     <nav class="header-nav">
         <div class="container">
-            <a href="index.html" class="header-nav__logo">Logo</a>
+            <a href="index.html" class="header-nav__logo">
+                <img src="imagens/logo.svg" alt="Logo">
+            </a>
         
             <button class="header-nav__hamburgger" type="button">
-                <div class="header-nav__hamburggerParties">Menu</div>
+                <div class="header-nav__hamburggerParties">
+                    <span class="sr-only">Menu</span>
+                    <i class="fa fa-bars"></i>
+
+                </div>
             </button>
 
-            <ul class="header-nav__menu--opened">
+            <ul class="header-nav__menu">
                 <li><a href="#">Portifólio</a></li>
                 <li><a href="#">Sobre mim</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#">Contato</a></li>
             </ul>  
         
         </div>
