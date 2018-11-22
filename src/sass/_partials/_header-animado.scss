@@ -1,6 +1,28 @@
 .header-animado{
     $h: 300px;
     background-color: $main-color;
-    height: $h;
     border-radius: 0;
+    padding: 96px 0 0 0;
+
+
+    &__title{
+        font-size: 38px;
+        font-weight: bolder;
+        color: rgb(0, 31, 18);
+    }
+
+    &__subtitle{
+        font-size: 34px;
+        letter-spacing: 1.5px;
+        color: white;
+        font-weight: 300;
+    }
+
+    &__ilustra{
+        background-image: url("../imagens/cenario_all_960.png");
+        height: $h/2;
+        background-size: auto 100%;
+        background-position: 50% top;
+        
+    }
 }

@@ -1,7 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .header-animado {
   background-color: #64a59a;
-  height: 300px;
-  border-radius: 0; }
+  border-radius: 0;
+  padding: 96px 0 0 0; }
+  .header-animado__title {
+    font-size: 38px;
+    font-weight: bolder;
+    color: #001f12; }
+  .header-animado__subtitle {
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: 300; }
+  .header-animado__ilustra {
+    background-image: url("../imagens/cenario_all_960.png");
+    height: 150px;
+    background-size: auto 100%;
+    background-position: 50% top; }
 
 .header-nav {
   background-color: #84b8af; }
