@@ -1,8 +1,11 @@
 .header-animado{
     $h: 300px;
+    $largura_cenario: 2400px;
     background-color: $main-color;
     border-radius: 0;
     padding: 96px 0 0 0;
+
+    
 
 
     &__title{
@@ -22,7 +25,72 @@
         background-image: url("../imagens/cenario_all_960.png");
         height: $h/2;
         background-size: auto 100%;
-        background-position: 50% top;
+        background-position: center top;
+        overflow: hidden;
+        &>div{
+            display:none;
+        } 
         
+        @mixin anima($img, $animationType){
+            background-image: url("../imagens/#{$img}");
+            animation: anima_cenario #{$animationType};
+        }
+
+        @keyframes anima_cenario{
+            from{
+                transform: translateX(-50%) 
+                translateZ(0);
+            }
+
+            to{
+                transform: translateX(0) 
+                translateZ(0);
+            }
+        }
+
+        @media screen and (min-width: 480px){
+            background-image: url("../imagens/cenario_all_1530.png");
+        }
+        @media screen and (min-width: 960px){
+            background-image: url("../imagens/cenario_bg.png");
+            height: $h;
+            position: relative;
+
+            &>div{
+                display:block;
+                height: 100%;
+                position: absolute;
+                top:0;
+                left:0;
+                
+                width: $largura_cenario * 2;
+
+            }
+            // Map de valores
+            $items: (
+                nuvens: "90s linear infinite reverse",
+                casas: "30s linear infinite reverse",
+                rua: "30s linear infinite reverse",
+                carrosCima: "15s linear infinite reverse",
+                carrosBaixo: "15s linear infinite"
+            );
+
+            @each $key, $valor in $items {
+                
+                @if $valor {
+                    .#{$key} {
+                        @include anima("cenario_#{$key}.png", $valor );
+                    }
+                } @else {
+                    .#{$key} {
+                        @include anima("cenario_#{$key}.png");
+                    }
+                }
+                                
+            }   
+
+        }
+        
+    
     }
 }
