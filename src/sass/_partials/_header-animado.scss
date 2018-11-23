@@ -28,7 +28,24 @@
         background-position: center top;
         &>div{
             display:none;
-        }   
+        } 
+        
+        @mixin anima($img, $animationType){
+            background-image: url("../imagens/#{$img}");
+            animation: anima_cenario #{$animationType};
+        }
+
+        @keyframes anima_cenario{
+            from{
+                transform: translateX(-50%) 
+                translateZ(0);
+            }
+
+            to{
+                transform: translateX(0) 
+                translateZ(0);
+            }
+        }
 
         @media screen and (min-width: 480px){
             background-image: url("../imagens/cenario_all_1530.png");
@@ -48,24 +65,49 @@
                 width: $largura_cenario * 2;
 
             }
+            // Map de valores
+            $items: (
+                nuvens: "90s linear infinite reverse",
+                casas: "30s linear infinite reverse",
+                rua: "30s linear infinite reverse",
+                carrosCima: "15s linear infinite reverse",
+                carrosBaixo: "15s linear infinite"
+            );
 
-            @keyframes anima_cenario{
-                from{
-                    transform: translateX(-50%) 
-                    translateZ(0);
+            @each $key, $valor in $items {
+                
+                @if $valor {
+                    .#{$key} {
+                        @include anima("cenario_#{$key}.png", $valor );
+                    }
+                } @else {
+                    .#{$key} {
+                        @include anima("cenario_#{$key}.png");
+                    }
                 }
-
-                to{
-                    transform: translateX(0) 
-                    translateZ(0);
-                }
+                
+                
             }
 
-            .nuvens{
-                background-image: url("../imagens/cenario_nuvens.png");
-                animation: anima_cenario 10s linear infinite;
-            }
+            // .nuvens{
+            //     @include anima("cenario_nuvens.png","90s linear infinite reverse"); 
+            // }
 
+            // .casas{
+            //     @include anima("cenario_casas.png","30s linear infinite reverse");
+            // }
+
+            // .rua{
+            //     @include anima("cenario_rua.png","30s linear infinite reverse");
+            // }
+
+            // .carrosCima{
+            //     @include anima("cenario_carrosCima.png","15s linear infinite reverse"); 
+            // }
+
+            // .carrosBaixo{
+            //     @include anima("cenario_carrosBaixo.png","15s linear infinite"); 
+            // }
 
 
         }
