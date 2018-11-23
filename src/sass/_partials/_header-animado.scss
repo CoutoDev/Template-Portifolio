@@ -85,30 +85,8 @@
                         @include anima("cenario_#{$key}.png");
                     }
                 }
-                
-                
-            }
-
-            // .nuvens{
-            //     @include anima("cenario_nuvens.png","90s linear infinite reverse"); 
-            // }
-
-            // .casas{
-            //     @include anima("cenario_casas.png","30s linear infinite reverse");
-            // }
-
-            // .rua{
-            //     @include anima("cenario_rua.png","30s linear infinite reverse");
-            // }
-
-            // .carrosCima{
-            //     @include anima("cenario_carrosCima.png","15s linear infinite reverse"); 
-            // }
-
-            // .carrosBaixo{
-            //     @include anima("cenario_carrosBaixo.png","15s linear infinite"); 
-            // }
-
+                                
+            }   
 
         }
         

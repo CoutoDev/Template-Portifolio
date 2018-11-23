@@ -110,3 +110,54 @@ h1, h2, h3, h4, h5, h6, .title {
       display: none; }
     .menu-openned .header-nav__menu {
       display: block; }
+
+.card-portifolio {
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid transparent;
+  position: relative;
+  border: solid 1px red; }
+  .card-portifolio:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: #777;
+    width: 50%;
+    height: 20px;
+    bottom: 12px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+    left: 5px; }
+  .card-portifolio:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: #777;
+    width: 50%;
+    height: 20px;
+    bottom: 12px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(3deg);
+    right: 5px; }
+  .card-portifolio__imagem {
+    height: 230px;
+    overflow: hidden; }
+    .card-portifolio__imagem img {
+      max-width: 100%;
+      opacity: .5;
+      transition: opacity 0.5s linear; }
+  .card-portifolio:hover img {
+    opacity: 1; }
+  .card-portifolio:hover .card-portifolio__btn {
+    background: #84b8af;
+    color: #fff; }
+    .card-portifolio:hover .card-portifolio__btn:hover {
+      background: #58b1a2; }
+  .card-portifolio__btn {
+    background: transparent;
+    color: #64a59a;
+    display: block;
+    border: none;
+    border-radius: 0;
+    width: 100px;
+    transition: all .3s linear; }
