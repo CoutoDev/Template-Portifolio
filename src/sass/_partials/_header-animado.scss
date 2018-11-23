@@ -1,8 +1,11 @@
 .header-animado{
     $h: 300px;
+    $largura_cenario: 2400px;
     background-color: $main-color;
     border-radius: 0;
     padding: 96px 0 0 0;
+
+    
 
 
     &__title{
@@ -22,7 +25,51 @@
         background-image: url("../imagens/cenario_all_960.png");
         height: $h/2;
         background-size: auto 100%;
-        background-position: 50% top;
+        background-position: center top;
+        &>div{
+            display:none;
+        }   
+
+        @media screen and (min-width: 480px){
+            background-image: url("../imagens/cenario_all_1530.png");
+        }
+        @media screen and (min-width: 960px){
+            background-image: url("../imagens/cenario_bg.png");
+            height: $h;
+            position: relative;
+
+            &>div{
+                display:block;
+                height: 100%;
+                position: absolute;
+                top:0;
+                left:0;
+                
+                width: $largura_cenario * 2;
+
+            }
+
+            @keyframes anima_cenario{
+                from{
+                    transform: translateX(-50%) 
+                    translateZ(0);
+                }
+
+                to{
+                    transform: translateX(0) 
+                    translateZ(0);
+                }
+            }
+
+            .nuvens{
+                background-image: url("../imagens/cenario_nuvens.png");
+                animation: anima_cenario 10s linear infinite;
+            }
+
+
+
+        }
         
+    
     }
 }
