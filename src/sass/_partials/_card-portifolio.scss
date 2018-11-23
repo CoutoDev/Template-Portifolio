@@ -10,8 +10,6 @@
         bottom:  12px;        
         box-shadow: 0 15px 10px #777;
 
-
-
         // Verifica a posição da sombra
         @if $dir == "left"{
             transform: rotate($angle * -1);
@@ -22,20 +20,22 @@
         }   
         
     }
+
     // Sombra "antes"
     &:before{
         @include sombra("left",3deg, 5px);
     }
+
     // Sombra "depois"
     &:after{
         @include sombra("right",3deg, 5px);
     }
- 
+
+    margin: 15px 0;
     padding: 0;
     border-radius: 0;
     border: 1px solid transparent;
     position: relative;
-    border: solid 1px red;
 
     &__imagem{
         height: 230px;
@@ -43,7 +43,7 @@
         img{
             max-width: 100%;
             opacity: .5;
-            transition:opacity 0.5s linear;
+            transition:opacity 0.5s linear, transform 1s ease-in;
         }
 
     }
@@ -51,18 +51,18 @@
     &:hover{
         img{
             opacity: 1;
-            
+            transform: scale(1.15) rotate(-5deg); 
         }
         
         .card-portifolio__btn{
             background: lighten($main-color,10);
             color: #fff;
 
+            
             &:hover{
                 background: saturate($main-color, 10);
             }
         }
-
     }  
 
     &__btn{  
@@ -73,7 +73,9 @@
         border-radius: 0;
         width: 100px;
         transition: all .3s linear;
-
+        margin-left: auto;
+        position: relative;
+        top: 1px;
         
     }
 

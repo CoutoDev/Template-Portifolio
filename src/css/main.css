@@ -25,7 +25,8 @@ h1, h2, h3, h4, h5, h6, .title {
     background-image: url("../imagens/cenario_all_960.png");
     height: 150px;
     background-size: auto 100%;
-    background-position: center top; }
+    background-position: center top;
+    overflow: hidden; }
     .header-animado__ilustra > div {
       display: none; }
 
@@ -112,11 +113,11 @@ h1, h2, h3, h4, h5, h6, .title {
       display: block; }
 
 .card-portifolio {
+  margin: 15px 0;
   padding: 0;
   border-radius: 0;
   border: 1px solid transparent;
-  position: relative;
-  border: solid 1px red; }
+  position: relative; }
   .card-portifolio:before {
     content: '';
     z-index: -1;
@@ -145,9 +146,10 @@ h1, h2, h3, h4, h5, h6, .title {
     .card-portifolio__imagem img {
       max-width: 100%;
       opacity: .5;
-      transition: opacity 0.5s linear; }
+      transition: opacity 0.5s linear, transform 1s ease-in; }
   .card-portifolio:hover img {
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1.15) rotate(-5deg); }
   .card-portifolio:hover .card-portifolio__btn {
     background: #84b8af;
     color: #fff; }
@@ -160,4 +162,26 @@ h1, h2, h3, h4, h5, h6, .title {
     border: none;
     border-radius: 0;
     width: 100px;
-    transition: all .3s linear; }
+    transition: all .3s linear;
+    margin-left: auto;
+    position: relative;
+    top: 1px; }
+
+.rodape {
+  background: #c5ddd9;
+  height: 100%;
+  color: white; }
+  .rodape__list {
+    overflow: auto;
+    padding: 0;
+    width: 100%; }
+  .rodape__listItem {
+    width: 20%;
+    float: left;
+    list-style: none;
+    padding: 0; }
+    .rodape__listItem > a {
+      font-size: 1.5em;
+      color: white;
+      display: block;
+      text-align: right; }
