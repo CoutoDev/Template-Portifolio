@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "gulp": "gulp",
     "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap && cp -r node_modules/jquery/dist src/components/jquery && cp -r node_modules/popper.js/dist src/components/popper.js && cp -r node_modules/font-awesome/css src/components/font-awesome && cp -r node_modules/font-awesome/fonts src/components/font-awesome"
   },
   "author": "",
