@@ -17,28 +17,9 @@
     <script src="components/popper.js/popper.min.js"></script>
 </head>
 <body>
-    <nav class="header-nav">
-        <div class="container">
-            <a href="index.html" class="header-nav__logo">
-                <img src="imagens/logo.svg" alt="Logo">
-            </a>
-        
-            <button aria-controls="mainMenu" class="header-nav__hamburgger" type="button" aria-expanded="false">
-                <div class="header-nav__hamburggerParties">
-                    <span class="sr-only">Menu</span>
-                    <i class="fa fa-bars"></i>
-
-                </div>
-            </button>
-
-            <ul class="header-nav__menu" aria-expanded="false">
-                <li><a href="#">Portifólio</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>  
-        
-        </div>
-    </nav>
+    
+    @@include('./inc/nav.html')
+    
     <div class="jumbotron header-animado">
         
         <div class="container ">
@@ -63,135 +44,73 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/01.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
+            <!-- Cria um loop para enviar valores ao arquivo html -->
+            @@loop('inc/card-portfolio.html', [
+            {
+                "titulo":"Projeto 1",
+                "texto":"Meu primeiro Projeto",
+                "imagem":"imagens/portfolio/01.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            </div>
+            },
+            {
+                "titulo":"Projeto 2",
+                "texto":"Meu segundo Projeto",
+                "imagem":"imagens/portfolio/02.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/02.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
+            },
+            {
+                "titulo":"Projeto 3",
+                "texto":"Meu terceiro Projeto",
+                "imagem":"imagens/portfolio/03.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            </div>
+            },
+            {
+                "titulo":"Projeto 4",
+                "texto":"Meu quarto Projeto",
+                "imagem":"imagens/portfolio/04.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/03.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
+            },
+            {
+                "titulo":"Projeto 5",
+                "texto":"Meu quinto Projeto",
+                "imagem":"imagens/portfolio/05.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            </div>
+            },
+            {
+                "titulo":"Projeto 6",
+                "texto":"Meu sexto Projeto",
+                "imagem":"imagens/portfolio/06.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/04.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
+            },
+            {
+                "titulo":"Projeto 7",
+                "texto":"Meu sétimo Projeto",
+                "imagem":"imagens/portfolio/07.jpg",
+                "link":"#",
+                "alt":"Texto alternativo"
 
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/05.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/06.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                
-                <div class="img-thumbnail card-portifolio">
-                    <h3 class="card-portifolio__title">titulo do trabalho</h3>
-                    <div class="card-portifolio__imagem">
-                        <img src="imagens/portfolio/07.jpg" alt="imagem loja">
-                    </div>
-                
-                    <div class="caption card-portifolio__caption">
-                        <p class="card-portifolio__text">pequeno texto</p>   
-                    </div>
-                    <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
-                </div>
-
-            </div>
-
+            } 
+            
+            ])
 
             
         </div> <!-- row -->
         
 
     </div><!-- container -->
-    <footer class="rodape">
-        <div class="container">
-            <p class="text-right">Social:</p>
-            <ul class="list-inline text-right rodape__list">
-                <li class="list-inline-item rodape__listItem"><a href="#" class=" btn-social "><i class="fa fa-fw fa-facebook"></i></a></li>
-                <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-twitter"></i></a></li>
-                <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-github"></i></a></li>
-                <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </footer>
+    @@include('./inc/footer.html')
 <script src="js/main.js"></script>
 <script src="js/menu.js"></script>
 </body>

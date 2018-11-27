@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
-
     "gulp": "gulp",
     "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap && cp -r node_modules/jquery/dist src/components/jquery && cp -r node_modules/popper.js/dist src/components/popper.js && cp -r node_modules/font-awesome/css src/components/font-awesome && cp -r node_modules/font-awesome/fonts src/components/font-awesome"
   },
@@ -19,6 +17,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
+    "gulp-file-include": "^2.0.1",
     "gulp-sass": "^4.0.2"
   }
 }
