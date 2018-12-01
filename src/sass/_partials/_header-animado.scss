@@ -4,21 +4,29 @@
     background-color: $main-color;
     border-radius: 0;
     padding: 96px 0 0 0;
+    margin-bottom: 32px;
 
     
-
+     
+    
+        height: 100%; 
+  
 
     &__title{
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         font-size: 38px;
         font-weight: bolder;
         color: rgb(0, 31, 18);
     }
 
     &__subtitle{
+        height: 100%;
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         font-size: 34px;
         letter-spacing: 1.5px;
         color: white;
         font-weight: 300;
+        margin-bottom: 2em;
     }
 
     &__ilustra{

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Couto</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <!-- Scripts -->
+    
+    <script src="components/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/popper.js/popper.min.js"></script>
+</head>
+<body>
+    
+    <nav class="header-nav">
+    <div class="container">
+        <a href="index.html" class="header-nav__logo">
+            <img src="imagens/logo.svg" alt="Logo">
+        </a>
+    
+        <button aria-controls="mainMenu" class="header-nav__hamburgger" type="button" aria-expanded="false">
+            <div class="header-nav__hamburggerParties">
+                <span class="sr-only">Menu</span>
+                <i class="fa fa-bars"></i>
+
+            </div>
+        </button>
+
+        <ul class="header-nav__menu" id="mainMenu">
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="sobre.html">Sobre mim</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>  
+    
+    </div>
+</nav>
+    
+    <div class="jumbotron header-animado">
+        
+        <div class="container ">
+            <p class="header-animado__title">Vamos bater um papo?</p>
+            <h1 class="header-animado__subtitle">Entre em contato que entrarei em contato o mais rápido possível.</h1>
+        </div>
+<!-- 
+        <div class="header-animado__ilustra">
+            <div class="nuvens"></div>
+            <div class="casas"></div>
+            <div class="rua"></div>
+            <div class="carrosCima"></div>
+            <div class="carrosBaixo"></div>
+        </div> -->
+
+    </div>
+    
+    <div class="container">
+       
+        <div class="row">
+            <div class="col-12 col-lg-8 offset-lg-2 ">
+                <form action="">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome">
+                    </div>
+           
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="exemplo@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Mensagem</label>
+                        <textarea class="form-control"  id="msg" name="msg" placeholder="Digite sua mensagem"cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group d-flex justify-content-end ">
+                        <button class="btn btn-success " type="submit">Enviar</button>
+                    </div>
+                   
+
+                </form>
+            </div>
+        </div>
+
+    </div><!-- container -->
+    <footer class="rodape">
+    <div class="container">
+        <p class="text-right">Social:</p>
+        <ul class="list-inline text-right rodape__list">
+            <li class="list-inline-item rodape__listItem"><a href="#" class=" btn-social "><i class="fa fa-fw fa-facebook"></i></a></li>
+            <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-twitter"></i></a></li>
+            <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-github"></i></a></li>
+            <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

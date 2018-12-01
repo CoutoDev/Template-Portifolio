@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Couto</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Scripts -->
+    
+    <script src="components/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/popper.js/popper.min.js"></script>
+</head>
+<body>
+    
+    <nav class="header-nav">
+    <div class="container">
+        <a href="index.html" class="header-nav__logo">
+            <img src="imagens/logo.svg" alt="Logo">
+        </a>
+    
+        <button aria-controls="mainMenu" class="header-nav__hamburgger" type="button" aria-expanded="false">
+            <div class="header-nav__hamburggerParties">
+                <span class="sr-only">Menu</span>
+                <i class="fa fa-bars"></i>
+
+            </div>
+        </button>
+
+        <ul class="header-nav__menu" id="mainMenu">
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="sobre.html">Sobre mim</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>  
+    
+    </div>
+</nav>
+    
+    <div class="jumbotron header-animado">
+        
+        <div class="container ">
+            <p class="header-animado__title">O que ando fazendo?</p>
+            <h1 class="header-animado__subtitle">Veja alguns dos meus trabalhos</h1>
+        </div>
+
+        <div class="header-animado__ilustra">
+            <div class="nuvens"></div>
+            <div class="casas"></div>
+            <div class="rua"></div>
+            <div class="carrosCima"></div>
+            <div class="carrosBaixo"></div>
+        </div>
+
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Últimos Trabalhos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Cria um loop para enviar valores ao arquivo html -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                
+    <div class="img-thumbnail card-portifolio">
+        <h3 class="card-portifolio__title">Projeto 1</h3>
+        <div class="card-portifolio__imagem">
+            <img src="imagens/portfolio/01.jpg" alt="Texto alternativo">
+        </div>
+    
+        <div class="caption card-portifolio__caption">
+            <p class="card-portifolio__text">Meu primeiro Projeto</p>   
+        </div>
+        <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
+    </div>
+
+</div> <div class="col-xs-12 col-sm-6 col-md-4">
+                
+    <div class="img-thumbnail card-portifolio">
+        <h3 class="card-portifolio__title">Projeto 2</h3>
+        <div class="card-portifolio__imagem">
+            <img src="imagens/portfolio/02.jpg" alt="Texto alternativo">
+        </div>
+    
+        <div class="caption card-portifolio__caption">
+            <p class="card-portifolio__text">Meu segundo Projeto</p>   
+        </div>
+        <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
+    </div>
+
+</div> <div class="col-xs-12 col-sm-6 col-md-4">
+                
+    <div class="img-thumbnail card-portifolio">
+        <h3 class="card-portifolio__title">Projeto 3</h3>
+        <div class="card-portifolio__imagem">
+            <img src="imagens/portfolio/03.jpg" alt="Texto alternativo">
+        </div>
+    
+        <div class="caption card-portifolio__caption">
+            <p class="card-portifolio__text">Meu terceiro Projeto</p>   
+        </div>
+        <a href="#" class=" card-portifolio__btn btn btn-primary " role="button">ver mais</a>
+    </div>
+
+</div> 
+
+            
+        </div> <!-- row -->
+        
+
+    </div><!-- container -->
+    <footer class="rodape">
+    <div class="container">
+        <p class="text-right">Social:</p>
+        <ul class="list-inline text-right rodape__list">
+            <li class="list-inline-item rodape__listItem"><a href="#" class=" btn-social "><i class="fa fa-fw fa-facebook"></i></a></li>
+            <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-twitter"></i></a></li>
+            <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-github"></i></a></li>
+            <li class="list-inline-item rodape__listItem"><a href="#" class="btn-social "><i class="fa fa-fw fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
