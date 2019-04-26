@@ -1,0 +1,41 @@
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 0px 12px 0px #000000;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 30px;
+
+    &__content{
+        margin: 10px;
+
+        button{
+            width: 100%; 
+            margin: 10px 0;
+            i{
+                color: white;                
+                font-size: 1.5em;
+                text-align: center;
+            }
+        }
+
+        &__image{
+            &>img{
+                width: 300px;
+                height: auto;
+                border-radius: 20px;
+                &:hover{ 
+                    transition: all 0.8s ease-in-out;
+                    filter: grayscale(100%);
+                }
+            }
+        }
+        &__text{
+            font: {
+                family: 'Nunito Sans', sans-serif;
+                size: 30px;
+            } 
+        }
+    }
+}

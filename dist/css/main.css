@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200i,400");
 h1, h2, h3, h4, h5, h6, .title {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold; }
@@ -11,16 +12,22 @@ h1, h2, h3, h4, h5, h6, .title {
 .header-animado {
   background-color: #64a59a;
   border-radius: 0;
-  padding: 96px 0 0 0; }
+  padding: 96px 0 0 0;
+  margin-bottom: 32px;
+  height: 100%; }
   .header-animado__title {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 38px;
     font-weight: bolder;
     color: #001f12; }
   .header-animado__subtitle {
+    height: 100%;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 34px;
     letter-spacing: 1.5px;
     color: white;
-    font-weight: 300; }
+    font-weight: 300;
+    margin-bottom: 2em; }
   .header-animado__ilustra {
     background-image: url("../imagens/cenario_all_960.png");
     height: 150px;
@@ -30,11 +37,21 @@ h1, h2, h3, h4, h5, h6, .title {
     .header-animado__ilustra > div {
       display: none; }
 
+@-webkit-keyframes anima_cenario {
+  from {
+    -webkit-transform: translateX(-50%) translateZ(0);
+            transform: translateX(-50%) translateZ(0); }
+  to {
+    -webkit-transform: translateX(0) translateZ(0);
+            transform: translateX(0) translateZ(0); } }
+
 @keyframes anima_cenario {
   from {
-    transform: translateX(-50%) translateZ(0); }
+    -webkit-transform: translateX(-50%) translateZ(0);
+            transform: translateX(-50%) translateZ(0); }
   to {
-    transform: translateX(0) translateZ(0); } }
+    -webkit-transform: translateX(0) translateZ(0);
+            transform: translateX(0) translateZ(0); } }
     @media screen and (min-width: 480px) {
       .header-animado__ilustra {
         background-image: url("../imagens/cenario_all_1530.png"); } }
@@ -64,7 +81,8 @@ h1, h2, h3, h4, h5, h6, .title {
           animation: anima_cenario 15s linear infinite reverse; }
         .header-animado__ilustra .carrosBaixo {
           background-image: url("../imagens/cenario_carrosBaixo.png");
-          animation: anima_cenario 15s linear infinite; } }
+          -webkit-animation: anima_cenario 15s linear infinite;
+                  animation: anima_cenario 15s linear infinite; } }
 
 .js.menu-opened {
   overflow: hidden; }
@@ -79,7 +97,7 @@ h1, h2, h3, h4, h5, h6, .title {
     background-color: rgba(0, 0, 0, 0.7); }
 
 .header-nav {
-  background-color: #84b8af; }
+  background-color: #188d9f; }
   .js .header-nav {
     height: 50px; }
     .js .header-nav .container {
@@ -106,7 +124,7 @@ h1, h2, h3, h4, h5, h6, .title {
       font-size: 2em;
       padding: 0 0.5em; }
       .js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
-        background: #74aea5; }
+        background: #147a89; }
       @media screen and (min-width: 680px) {
         .js .header-nav__hamburgger {
           display: none; } }
@@ -118,13 +136,13 @@ h1, h2, h3, h4, h5, h6, .title {
       color: white;
       display: block;
       font-size: 1.5em;
-      border-top: 1px solid #58988d;
+      border-top: 1px solid #0e525d;
       padding: 1em; }
       .header-nav__menu a:hover {
-        background: #5c9e93; }
+        background: #0f5a66; }
     @media screen and (max-width: 680px) {
       .js .header-nav__menu {
-        background: #4f877e;
+        background: #0a3f47;
         z-index: 10;
         position: fixed;
         top: 50px;
@@ -150,7 +168,8 @@ h1, h2, h3, h4, h5, h6, .title {
             transition: all .3s ease-in-out;
             padding: 15px; }
             .header-nav__menu li a:hover {
-              transform: translateY(0.5em);
+              -webkit-transform: translateY(0.5em);
+                      transform: translateY(0.5em);
               box-shadow: 0 5px 15px -10px black; } }
 
 .card-portifolio {
@@ -168,7 +187,8 @@ h1, h2, h3, h4, h5, h6, .title {
     height: 20px;
     bottom: 12px;
     box-shadow: 0 15px 10px #777;
-    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
     left: 5px; }
   .card-portifolio:after {
     content: '';
@@ -179,7 +199,8 @@ h1, h2, h3, h4, h5, h6, .title {
     height: 20px;
     bottom: 12px;
     box-shadow: 0 15px 10px #777;
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
     right: 5px; }
   .card-portifolio__imagem {
     height: 230px;
@@ -187,18 +208,21 @@ h1, h2, h3, h4, h5, h6, .title {
     .card-portifolio__imagem img {
       max-width: 100%;
       opacity: .5;
-      transition: opacity 0.5s linear, transform 1s ease-in; }
+      transition: opacity 0.5s linear, -webkit-transform 1s ease-in;
+      transition: opacity 0.5s linear, transform 1s ease-in;
+      transition: opacity 0.5s linear, transform 1s ease-in, -webkit-transform 1s ease-in; }
   .card-portifolio:hover img {
     opacity: 1;
-    transform: scale(1.15) rotate(-5deg); }
+    -webkit-transform: scale(1.15) rotate(-5deg);
+            transform: scale(1.15) rotate(-5deg); }
   .card-portifolio:hover .card-portifolio__btn {
-    background: #84b8af;
+    background: #188d9f;
     color: #fff; }
     .card-portifolio:hover .card-portifolio__btn:hover {
-      background: #58b1a2; }
+      background: #0a6b7a; }
   .card-portifolio__btn {
     background: transparent;
-    color: #64a59a;
+    color: #116673;
     display: block;
     border: none;
     border-radius: 0;
@@ -208,21 +232,29 @@ h1, h2, h3, h4, h5, h6, .title {
     position: relative;
     top: 1px; }
 
+.rodape__list, .rodape__listItem {
+  display: flex; }
+
 .rodape {
-  background: #c5ddd9;
+  background-color: #188d9f;
   height: 100%;
   color: white; }
+  .rodape ul {
+    margin: 0px 0 !important; }
   .rodape__list {
     overflow: auto;
     padding: 0;
-    width: 100%; }
+    width: 100%;
+    align-content: center;
+    margin: 1rem; }
   .rodape__listItem {
-    width: 20%;
-    float: left;
+    justify-content: center;
+    width: 50%;
     list-style: none;
-    padding: 0; }
+    padding: 0;
+    margin: 1rem 0; }
     .rodape__listItem > a {
-      font-size: 1.5em;
+      font-size: 2em;
       color: white;
       display: block;
       text-align: right; }

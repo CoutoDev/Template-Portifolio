@@ -27,20 +27,14 @@
 /* Deprecated as of 4.4.0 */
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-.fa-twitter:before {
-  content: "\f099";
-}
-.fa-facebook:before {
-  content: "\f09a";
+.fa-linkedin-square:before {
+  content: "\f08c";
 }
 .fa-github:before {
   content: "\f09b";
 }
 .fa-bars:before {
   content: "\f0c9";
-}
-.fa-instagram:before {
-  content: "\f16d";
 }
 .sr-only {
   position: absolute;

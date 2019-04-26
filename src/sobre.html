@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Couto</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    
+    <!-- Scripts -->
+    
+    <script src="components/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/popper.js/popper.min.js"></script>
+</head>
+<body>
+    
+    @@include('./inc/nav.html')
+     
+    <div class="container">
+       
+        <div class="row">
+            <div class="about">
+                <div class="col-lg-6">
+                    <div class="about__content">
+                        <figure class="about__content__image">
+                            <img src="./imagens/couto.jpeg" alt="Vitor Coutinho Fernandes">
+                        </figure>
+                        <button type="button" class="btn btn-dark"> 
+                            <i class="fa fa-fw fa-github" aria-hidden="true"></i>
+                            Github     
+                        </button>                  
+                        <button type="button" class="btn btn-dark"> 
+                            <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i>
+                            LinkedIn     
+                        </button>                     
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="about__content__text">
+                            Formado em Analise e Desenvolvimento de Sistemas, sou apaixonado por
+                            programação e por tecnologia em geral. <br>
+                            Vivo em busca de novas tecnologias sempre visando me manter atualizado 
+                            nesse mundo em constante evolução.(Enquanto você esta lendo, mais um framework JavaScript foi lançado!) <br>
+                            
+                        </p>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- container -->
+    @@include('./inc/footer.html')
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

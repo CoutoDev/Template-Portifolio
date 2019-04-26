@@ -20,6 +20,7 @@
     $h: 50px;
     $breakpoint: 680px;
     background-color: lighten($main-color, 10%);
+    
 
     .js &{
         height: $h;

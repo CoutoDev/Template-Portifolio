@@ -1,26 +1,40 @@
+
+%flex{
+    display: flex;
+}
+
 .rodape{
-    background: lighten($main-color, 30);
+    background-color: lighten($main-color, 10%);
     height: 100%;
     color: white;
+
+    & ul{
+        margin: 0px 0 !important;
+    }
     
     &__list{
+        @extend %flex;
         overflow: auto;
         padding: 0;
         width: 100%;
-       
+        align-content: center;
+        margin: 1rem;
     }
 
     &__listItem{
-        width: 20%;
-        float: left;
+        @extend %flex;
+        justify-content: center;
+        width: 50%;
         list-style:none;
         padding: 0;
+        margin: 1rem 0;
 
         &>a{
-            font-size: 1.5em;
+            font-size: 2em;
             color: white;
             display: block;
             text-align: right;
+            
         } 
     }
 }
