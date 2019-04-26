@@ -1,3 +1,9 @@
+.about__content button a:hover, .about__content button a:active {
+  text-decoration: none; }
+
+.about__content button:hover i, .about__content button:hover a {
+  color: #282b30; }
+
 .about {
   width: 100%;
   height: auto;
@@ -10,19 +16,27 @@
     margin: 10px; }
     .about__content button {
       width: 100%;
-      margin: 10px 0; }
+      margin: 10px 0;
+      background-color: #282b30; }
+      .about__content button a {
+        color: #fff; }
       .about__content button i {
-        color: white;
+        color: #fff;
         font-size: 1.5em;
         text-align: center; }
+      .about__content button:hover {
+        transition: all 0.3s ease-in;
+        background-color: #fff; }
     .about__content__image > img {
       width: 300px;
       height: auto;
       border-radius: 20px; }
       .about__content__image > img:hover {
-        transition: all 0.8s ease-in-out;
+        transition: all 0.3s ease-out;
         -webkit-filter: grayscale(100%);
                 filter: grayscale(100%); }
     .about__content__text {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 30px; }
+      padding: 0 20px;
+      letter-spacing: 1px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 35px; }

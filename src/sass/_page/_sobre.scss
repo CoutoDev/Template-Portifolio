@@ -1,3 +1,11 @@
+
+%no-decoration{
+    text-decoration: none;
+}
+%btn-color{
+    color:$btn-color;
+}
+
 .about{
     width: 100%;
     height: auto;
@@ -13,28 +21,51 @@
         button{
             width: 100%; 
             margin: 10px 0;
-            i{
-                color: white;                
+            background-color: $btn-color;
+            a{
+                color: $btn-textColor;
+                &:hover{
+                    @extend %no-decoration;
+                }
+                &:active{
+                    @extend %no-decoration;
+                }
+            }
+            i{ 
+                color: $btn-textColor;                
                 font-size: 1.5em;
                 text-align: center;
             }
-        }
+            &:hover{
+                transition: all 0.3s ease-in;
+                background-color: $btn-textColor;
+                i{ 
+                   @extend %btn-color;
+                } 
+                a{ 
+                    @extend %btn-color;
+                } 
 
+            }
+        }
+ 
         &__image{
             &>img{
                 width: 300px;
                 height: auto;
                 border-radius: 20px;
                 &:hover{ 
-                    transition: all 0.8s ease-in-out;
-                    filter: grayscale(100%);
+                    transition: all 0.3s ease-out;
+                    filter: grayscale(100%); 
                 }
             }
         }
         &__text{
+            padding: 0 20px;
+            letter-spacing: 1px;
             font: {
-                family: 'Nunito Sans', sans-serif;
-                size: 30px;
+                family: 'Raleway', sans-serif;
+                size: 35px;
             } 
         }
     }
